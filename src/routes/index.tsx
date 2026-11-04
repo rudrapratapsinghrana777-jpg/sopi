@@ -62,8 +62,7 @@ function Home() {
               here for a wash!
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              SOPI makes handmade botanical soap from the rose petals the perfume industry throws
-              away — turning free waste into a premium, plastic-free product.
+              {"\n"}
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
