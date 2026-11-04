@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Feather, RefreshCw, ShieldCheck } from "lucide-react";
 import roseSoap from "@/assets/rose-soap.jpg";
 import mintSoap from "@/assets/mint-soap.jpg";
+import charcoalSoap from "@/assets/charcoal-soap.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -170,16 +171,17 @@ function Home() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="eyebrow">The range</p>
-            <h2 className="mt-4 text-4xl md:text-5xl">Two launch bars</h2>
+            <h2 className="mt-4 text-4xl md:text-5xl">Three launch bars</h2>
           </div>
           <Link to="/products" className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
             Full specifications <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
             { img: roseSoap, name: "Rose Valorosa", note: "Hero bar · spent-petal antioxidants" },
             { img: mintSoap, name: "Eucalyptus & Mint", note: "Active line · cooling & deodorising" },
+            { img: charcoalSoap, name: "Charcoal & Tea Tree", note: "Detox line · purify & unclog" },
           ].map((p) => (
             <Link key={p.name} to="/products" className="group block overflow-hidden rounded-2xl bg-card shadow-card">
               <div className="overflow-hidden">

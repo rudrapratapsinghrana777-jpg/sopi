@@ -117,4 +117,29 @@ export const products = [
       "Absorbs excess oil without stripping skin",
     ],
   },
+  {
+    id: "charcoal",
+    name: "Activated Charcoal & Tea Tree",
+    line: "Detox line · Purify & unclog",
+    tagline:
+      "A deeply cleansing bar with activated bamboo charcoal and pure tea tree oil — absorbs excess sebum, draws out impurities and gives natural antibacterial protection.",
+    price: 250,
+    cogs: 48,
+    specs: [
+      ["Variant", "Detoxifying soap-on-a-rope"],
+      ["Net weight", "100 g"],
+    ],
+    actives: [
+      "Activated bamboo charcoal powder",
+      "Pure tea tree essential oil (Melaleuca alternifolia)",
+      "Cold-pressed jojoba oil",
+      "SLS/SLES-free organic glycerin base",
+      "Unbleached organic jute cord",
+    ],
+    benefits: [
+      "Deep pore detoxification",
+      "Natural plant charcoal colour — zero synthetic dyes",
+      "Hanging loop prevents soggy sludge",
+    ],
+  },
 ] as const;
