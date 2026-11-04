@@ -7,8 +7,7 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-4xl">SOPI</p>
           <p className="mt-3 max-w-sm text-sm text-ink-foreground/70">
-            Handmade zero-waste botanical soaps from Valorosa Labs. One flower, two products,
-            nothing thrown away.
+            Handmade zero-waste botanical soaps from Valorosa Labs. SOPI — here for a wash!
           </p>
         </div>
         <div className="space-y-2 text-sm">
