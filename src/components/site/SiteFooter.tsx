@@ -19,9 +19,6 @@ export function SiteFooter() {
           <Link to="/process" className="block text-ink-foreground/80 hover:text-ink-foreground">
             Our Process
           </Link>
-          <Link to="/economics" className="block text-ink-foreground/80 hover:text-ink-foreground">
-            Economics
-          </Link>
         </div>
         <div className="space-y-2 text-sm">
           <p className="eyebrow text-gold">Invest</p>

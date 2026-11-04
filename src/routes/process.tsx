@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FlaskConical, Droplets, Layers, QrCode } from "lucide-react";
+import { Flower2, Thermometer, Layers, Link2, ShieldCheck } from "lucide-react";
 import processImg from "@/assets/process.jpg";
 
 export const Route = createFileRoute("/process")({
@@ -19,28 +19,34 @@ export const Route = createFileRoute("/process")({
 
 const steps = [
   {
-    icon: Droplets,
-    stage: "Stage 1",
-    title: "Distil the rose",
-    body: "Fresh Damask rose petals are steam-distilled to collect rose oil and rose water (hydrosol) — the classic, high-value outputs.",
+    icon: Flower2,
+    stage: "Step 01 · Cold-Extracted Botanicals",
+    title: "Zero-Waste Petal Sourcing",
+    body: "We collect fresh Damask rose petals and spent botanical biomass. Using low-temperature hydro-distillation and natural extraction, we capture active antioxidants, rose hydrosols, and rich plant pigments without adding synthetic dyes or harsh chemicals.",
   },
   {
-    icon: FlaskConical,
-    stage: "Stage 2",
-    title: "Recover from the waste",
-    body: "The spent petals, normally discarded, are extracted again to recover anthocyanins — natural antioxidant pigments that give our bar its mauve colour.",
+    icon: Thermometer,
+    stage: "Step 02 · Thermal Preserved Actives",
+    title: "Low-Heat Artisanal Blending",
+    body: "Our sulfate-free organic plant glycerin base is gently melted at controlled temperatures. Once cooled below 50°C, we fold in cold-pressed rosehip oil, therapeutic essential oils, and our natural botanical pigments — protecting delicate plant nutrients from heat damage.",
   },
   {
     icon: Layers,
-    stage: "Stage 3",
-    title: "Hand-pour the bar",
-    body: "Hydrosol, extract and cold-pressed oils are blended into a Grade 1 soap base and poured by hand around a double figure-8 jute anchor.",
+    stage: "Step 03 · Precision Mold Crafting",
+    title: "Hand-Poured Two-Stage Layering",
+    body: "The liquid soap is hand-poured in two distinct stages. The first layer sets the foundation, creating a smooth, bubble-free surface before the second layer locks in the natural botanical texture.",
   },
   {
-    icon: QrCode,
-    stage: "Stage 4",
-    title: "Verify every batch",
-    body: "Each batch is checked with thin-layer chromatography and given a QR-linked certificate of analysis, so customers can see exactly what's inside.",
+    icon: Link2,
+    stage: "Step 04 · Hand-Knotted Zero-Waste Loop",
+    title: "Organic Jute Cord Anchoring",
+    body: "Before the soap fully sets, an unbleached, 100% organic jute cord — tied with a double-knot anchor — is manually embedded into the centre. This lets your bar hang dry 360°, preventing soggy sludge and eliminating plastic loofahs.",
+  },
+  {
+    icon: ShieldCheck,
+    stage: "Step 05 · 100% Plastic-Free Finish",
+    title: "Ambient Cure & QC Clearance",
+    body: "Bars cure naturally at room temperature for 6 hours. After passing our rope pull-strength test (≥5.0 kgf) and a visual check, each bar is wrapped in biodegradable cellulose film with a QR-linked digital Certificate of Analysis.",
   },
 ];
 
@@ -50,7 +56,7 @@ function Process() {
       <section className="container-page py-16 md:py-24">
         <p className="eyebrow">Our process</p>
         <h1 className="mt-4 max-w-3xl text-5xl leading-tight md:text-6xl">
-          We get two products out of every flower.
+          How we handcraft every SOPI bar.
         </h1>
         <img
           src={processImg}
@@ -62,7 +68,7 @@ function Process() {
       </section>
 
       <section className="container-page">
-        <ol className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2">
+        <ol className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-2 [&>li:last-child]:md:col-span-2">
           {steps.map((s) => (
             <li key={s.title} className="bg-card p-8 md:p-10">
               <div className="flex items-center gap-3">
