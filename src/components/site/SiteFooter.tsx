@@ -24,7 +24,7 @@ export function SiteFooter() {
           <Link to="/funding" className="block text-ink-foreground/80 hover:text-ink-foreground">
             Funding brief
           </Link>
-          <p className="text-ink-foreground/60">Graphic Era B.Pharm · Incubator E-Cell</p>
+          <p className="text-ink-foreground/60">{"\n"}</p>
         </div>
       </div>
       <div className="border-t border-ink-foreground/10">
