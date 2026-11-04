@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as EconomicsRouteImport } from './routes/economics'
 import { Route as FundingRouteImport } from './routes/funding'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ProductsRouteImport } from './routes/products'
@@ -18,11 +17,6 @@ import { Route as ProductsRouteImport } from './routes/products'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EconomicsRoute = EconomicsRouteImport.update({
-  id: '/economics',
-  path: '/economics',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FundingRoute = FundingRouteImport.update({
@@ -43,14 +37,12 @@ const ProductsRoute = ProductsRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/economics': typeof EconomicsRoute
   '/funding': typeof FundingRoute
   '/process': typeof ProcessRoute
   '/products': typeof ProductsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/economics': typeof EconomicsRoute
   '/funding': typeof FundingRoute
   '/process': typeof ProcessRoute
   '/products': typeof ProductsRoute
@@ -58,22 +50,20 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/economics': typeof EconomicsRoute
   '/funding': typeof FundingRoute
   '/process': typeof ProcessRoute
   '/products': typeof ProductsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/economics' | '/funding' | '/process' | '/products'
+  fullPaths: '/' | '/funding' | '/process' | '/products'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/economics' | '/funding' | '/process' | '/products'
-  id: '__root__' | '/' | '/economics' | '/funding' | '/process' | '/products'
+  to: '/' | '/funding' | '/process' | '/products'
+  id: '__root__' | '/' | '/funding' | '/process' | '/products'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  EconomicsRoute: typeof EconomicsRoute
   FundingRoute: typeof FundingRoute
   ProcessRoute: typeof ProcessRoute
   ProductsRoute: typeof ProductsRoute
@@ -86,13 +76,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/economics': {
-      id: '/economics'
-      path: '/economics'
-      fullPath: '/economics'
-      preLoaderRoute: typeof EconomicsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/funding': {
@@ -121,7 +104,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  EconomicsRoute: EconomicsRoute,
   FundingRoute: FundingRoute,
   ProcessRoute: ProcessRoute,
   ProductsRoute: ProductsRoute,

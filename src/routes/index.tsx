@@ -148,6 +148,23 @@ function Home() {
         </div>
       </section>
 
+      {/* Differentiators */}
+      <section className="container-page pt-24">
+        <p className="eyebrow">Why SOPI</p>
+        <h2 className="mt-4 text-4xl md:text-5xl">Built to hang, built to last</h2>
+        <div className="mt-10 grid gap-10 md:grid-cols-2">
+          {[
+            ["No soggy sludge", "Hanging storage allows complete airflow, extending soap life by up to 2x."],
+            ["100% plastic-free", "Replaces plastic body washes, synthetic loofahs and plastic packaging."],
+          ].map(([t, d]) => (
+            <div key={t} className="border-t-2 border-primary pt-6">
+              <h3 className="text-3xl">{t}</h3>
+              <p className="mt-2 text-muted-foreground">{d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Products teaser */}
       <section className="container-page py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
