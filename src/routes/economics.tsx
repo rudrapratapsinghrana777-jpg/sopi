@@ -65,7 +65,7 @@ function Economics() {
       </p>
 
       <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-        <div className="space-y-8 rounded-2xl border border-border bg-card p-8 shadow-card">
+        <div className="space-y-8 self-start rounded-2xl border border-border bg-card p-8 shadow-card">
           <Slider label="Bars sold per month" value={units} min={250} max={10000} step={250} onChange={setUnits} format={(v) => v.toLocaleString("en-IN")} />
           <Slider label="Retail price per bar" value={price} min={150} max={500} step={10} onChange={setPrice} format={inr} />
           <Slider label="Cost to make per bar" value={cogs} min={30} max={120} step={1} onChange={setCogs} format={inr} />
