@@ -39,8 +39,7 @@ function Funding() {
           </h1>
         </div>
         <p className="text-lg text-muted-foreground">
-          Prepared for the Graphic Era × IIT Bombay E-Cell panels. The plan funds pilot production,
-          protects the business with a reserve, and launches sales.
+          Prepared
         </p>
       </div>
 
