@@ -7,13 +7,13 @@ import charcoalSoap from "@/assets/charcoal-soap.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SOPI — One Flower. Two Products. Zero Waste." },
+      { title: "SOPI — Here for a Wash!" },
       {
         name: "description",
         content:
           "SOPI turns discarded rose petals into premium handmade soap-on-a-rope. Seeking ₹80,000 prototype funding.",
       },
-      { property: "og:title", content: "SOPI — One Flower. Two Products. Zero Waste." },
+      { property: "og:title", content: "SOPI — Here for a Wash!" },
       {
         property: "og:description",
         content: "Handmade zero-waste botanical soaps from recovered rose biomass.",
@@ -57,11 +57,9 @@ function Home() {
           <div className="animate-rise">
             <p className="eyebrow">Valorosa Labs · Prototype stage</p>
             <h1 className="mt-6 text-5xl leading-[1.02] text-foreground sm:text-6xl lg:text-7xl">
-              One flower.
+              <em className="text-primary">SOPI</em>
               <br />
-              Two products.
-              <br />
-              <em className="text-primary">Zero waste.</em>
+              here for a wash!
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
               SOPI makes handmade botanical soap from the rose petals the perfume industry throws
