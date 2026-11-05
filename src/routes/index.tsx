@@ -62,7 +62,7 @@ function Home() {
               here for a wash!
             </h1>
             <p className="mt-8 max-w-lg text-lg leading-relaxed text-muted-foreground">
-              {"\n"}
+              SOPI handcrafts premium, zero-waste "Soap-on-a-Rope" bars using plant-derived pigments and pure essential oils.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
