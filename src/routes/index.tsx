@@ -3,6 +3,7 @@ import { ArrowRight, Feather, RefreshCw, ShieldCheck } from "lucide-react";
 import roseSoap from "@/assets/rose-soap.jpg";
 import mintSoap from "@/assets/mint-soap.jpg";
 import charcoalSoap from "@/assets/charcoal-soap.jpg";
+import orangeSoap from "@/assets/orange-soap.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,7 +134,7 @@ function Home() {
 
       {/* Pillars */}
       <section className="container-page">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {pillars.map((p) => (
             <div key={p.title} className="rounded-2xl border border-border bg-card p-8 shadow-card">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-accent-foreground">
@@ -168,17 +169,18 @@ function Home() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="eyebrow">The range</p>
-            <h2 className="mt-4 text-4xl md:text-5xl">Three launch bars</h2>
+            <h2 className="mt-4 text-4xl md:text-5xl">Four launch bars</h2>
           </div>
           <Link to="/products" className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
             Full specifications <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
             { img: roseSoap, name: "Rose Valorosa", note: "Hero bar · spent-petal antioxidants" },
             { img: mintSoap, name: "Eucalyptus & Mint", note: "Active line · cooling & deodorising" },
             { img: charcoalSoap, name: "Charcoal & Tea Tree", note: "Detox line · purify & unclog" },
+            { img: orangeSoap, name: "Sweet Orange & Cinnamon", note: "Radiance line · brighten & energize" },
           ].map((p) => (
             <Link key={p.name} to="/products" className="group block overflow-hidden rounded-2xl bg-card shadow-card">
               <div className="overflow-hidden">
