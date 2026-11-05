@@ -142,4 +142,30 @@ export const products = [
       "Hanging loop prevents soggy sludge",
     ],
   },
+  {
+    id: "orange",
+    name: "Sweet Orange & Cinnamon",
+    line: "Radiance line · Brighten & energize",
+    tagline:
+      "An invigorating botanical bar infused with cold-pressed sweet orange peel oil and sun-dried orange zest. Natural vitamin C and a touch of warm cinnamon gently exfoliate dead skin, promote cell turnover and restore natural radiance.",
+    price: 250,
+    cogs: 48,
+    specs: [
+      ["Variant", "Radiance & exfoliating soap-on-a-rope"],
+      ["Net weight", "100 g"],
+    ],
+    actives: [
+      "Cold-pressed sweet orange essential oil (Citrus sinensis)",
+      "Sun-dried orange peel powder (natural exfoliant)",
+      "Pure cinnamon bark essential oil (Cinnamomum verum)",
+      "Cold-pressed rosehip seed oil",
+      "SLS/SLES-free organic glycerin base",
+      "Unbleached organic jute cord",
+    ],
+    benefits: [
+      "Natural vitamin C radiance boost",
+      "Zero-plastic biodegradable exfoliating particles",
+      "360° airflow hang-dry design",
+    ],
+  },
 ] as const;

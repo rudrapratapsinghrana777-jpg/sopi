@@ -3,6 +3,7 @@ import { Check } from "lucide-react";
 import roseSoap from "@/assets/rose-soap.jpg";
 import mintSoap from "@/assets/mint-soap.jpg";
 import charcoalSoap from "@/assets/charcoal-soap.jpg";
+import orangeSoap from "@/assets/orange-soap.jpg";
 import { products, inr } from "@/lib/sopi";
 
 export const Route = createFileRoute("/products")({
@@ -14,13 +15,13 @@ export const Route = createFileRoute("/products")({
         content: "Rose Valorosa, Eucalyptus & Mint and Activated Charcoal & Tea Tree: handmade 100 g botanical soap bars on organic jute rope.",
       },
       { property: "og:title", content: "SOPI Products — Rose Valorosa & Eucalyptus Mint" },
-      { property: "og:description", content: "Three handmade, plastic-free botanical soap bars." },
+      { property: "og:description", content: "Four handmade, plastic-free botanical soap bars." },
     ],
   }),
   component: Products,
 });
 
-const images = { rose: roseSoap, mint: mintSoap, charcoal: charcoalSoap } as const;
+const images = { rose: roseSoap, mint: mintSoap, charcoal: charcoalSoap, orange: orangeSoap } as const;
 
 function Products() {
   return (
