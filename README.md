@@ -1,6 +1,6 @@
 # Sopi
 
-this is my project on handmade soap . i plan ask for funding . make a profficinal looking webside for me .
+this is my project on handmade soap . i plan ask for funding .
 
 This project was built with [Lovable](https://lovable.dev).
 
