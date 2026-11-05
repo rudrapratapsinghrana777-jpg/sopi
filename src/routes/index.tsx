@@ -35,7 +35,7 @@ const pillars = [
   {
     icon: RefreshCw,
     title: "Zero-waste circularity",
-    body: "Rose distillation throws away up to 80% of the flower. We recover the antioxidant pigments from those spent petals and put them into every bar.",
+    body: "SOPI implements circular economy principles by upcycling discarded floral biomass into high-value active botanicals, while its zero-sludge jute hanging design and 100% plastic-free packaging completely eliminate waste and double product longevity.",
   },
   {
     icon: ShieldCheck,
