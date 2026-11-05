@@ -15,6 +15,7 @@ import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FundingRouteImport } from './routes/funding'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ProductsRouteImport } from './routes/products'
+import { Route as StylePreviewRouteImport } from './routes/style-preview'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const ProductsRoute = ProductsRouteImport.update({
   path: '/products',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StylePreviewRoute = StylePreviewRouteImport.update({
+  id: '/style-preview',
+  path: '/style-preview',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/funding': typeof FundingRoute
   '/process': typeof ProcessRoute
   '/products': typeof ProductsRoute
+  '/style-preview': typeof StylePreviewRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/funding': typeof FundingRoute
   '/process': typeof ProcessRoute
   '/products': typeof ProductsRoute
+  '/style-preview': typeof StylePreviewRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,14 +79,36 @@ export interface FileRoutesById {
   '/funding': typeof FundingRoute
   '/process': typeof ProcessRoute
   '/products': typeof ProductsRoute
+  '/style-preview': typeof StylePreviewRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/faq' | '/funding' | '/process' | '/products'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/faq'
+    | '/funding'
+    | '/process'
+    | '/products'
+    | '/style-preview'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/faq' | '/funding' | '/process' | '/products'
+  to:
+    | '/'
+    | '/about'
+    | '/faq'
+    | '/funding'
+    | '/process'
+    | '/products'
+    | '/style-preview'
   id:
-    '__root__' | '/' | '/about' | '/faq' | '/funding' | '/process' | '/products'
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/faq'
+    | '/funding'
+    | '/process'
+    | '/products'
+    | '/style-preview'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -88,6 +118,7 @@ export interface RootRouteChildren {
   FundingRoute: typeof FundingRoute
   ProcessRoute: typeof ProcessRoute
   ProductsRoute: typeof ProductsRoute
+  StylePreviewRoute: typeof StylePreviewRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -134,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/style-preview': {
+      id: '/style-preview'
+      path: '/style-preview'
+      fullPath: '/style-preview'
+      preLoaderRoute: typeof StylePreviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -144,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   FundingRoute: FundingRoute,
   ProcessRoute: ProcessRoute,
   ProductsRoute: ProductsRoute,
+  StylePreviewRoute: StylePreviewRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
